@@ -137,13 +137,13 @@ public class InvoicesTest extends InitTest{
 	public void deleteInvoice() {
 		InvoicesPage invoices = new InvoicesPage(driver);	
 		invoices.getItemDropDown(0);
-		System.out.println("here");
+	
 		invoices.deleteItem("NO", 5);
-		System.out.println("here");
+	
 		Assert.assertEquals(invoices.getFullListClients(), 6);
-		System.out.println("here");	
+	
 		invoices.deleteItem("YES", 5);
-		System.out.println("here");
+
 		Assert.assertEquals(invoices.getFullListClients(), 5);
 	}
 

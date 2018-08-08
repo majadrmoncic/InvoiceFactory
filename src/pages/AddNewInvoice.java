@@ -17,15 +17,7 @@ public class AddNewInvoice extends PageObject {
 		super(driver);
 	}
 	
-	public void sleep(int x) {
-	try {
-		Thread.sleep(x);
-	} catch (InterruptedException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
-	}
-	
+		
 	// general locators
 	
 	// error messages

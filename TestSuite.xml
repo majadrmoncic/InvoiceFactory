@@ -6,6 +6,8 @@
             <class name="tests.LoginTest" />            
             <class name="tests.InvoicesTest" />
             <class name="tests.AddNewInvoiceTest" />
+            <class name="tests.BusinessTest" />
+            <class name="tests.BusinessFormTest" />
         </classes>
     </test>
 </suite>

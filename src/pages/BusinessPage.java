@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public class BusinessPage extends PageObject {
+public class BusinessPage extends CommonPage {
 
 	public BusinessPage(WebDriver driver) {
 		super(driver);
@@ -28,6 +28,11 @@ public class BusinessPage extends PageObject {
 	public String getBusinessName(int item) {
 		wait.until(ExpectedConditions.visibilityOfAllElements(businessNames));
 		return businessNames.get(item).getText();
+	}
+	
+	public int getFullListBusiness() {
+		wait.until(ExpectedConditions.visibilityOfAllElements(businessNames));
+		return businessNames.size();
 	}
 	
 	@FindBy (id="expand-business-details")
@@ -72,12 +77,28 @@ public class BusinessPage extends PageObject {
 	
 	@FindBy (css="button[id*='context-delete']")
 	WebElement deleteBusiness;
+		
+	@FindBy (css=".v-dialog--active .confirm-delete-dialog")
+	WebElement deleteDialog;
 	
-	public void deleteBusiness() {
+	@FindBy (css="button[id*=context-download-dialog-no]")
+	List <WebElement> deleteNo;
+	
+	@FindBy (css="button[id*=context-download-dialog-yes]")
+	List <WebElement> deleteYes;
+	
+	public void deleteBusiness(String answer) {
 		wait.until(ExpectedConditions.elementToBeClickable(deleteBusiness));
 		deleteBusiness.click();
+		wait.until(ExpectedConditions.visibilityOf(deleteDialog));
+		if (answer.equals("YES")) {
+			deleteYes.get(1).click();
+		}
+		else {
+			deleteNo.get(0).click();
+		}
 	}
-	
+		
 	
 	@FindBy (css="button[id*='business-edit-btn']")
 	WebElement editBusiness;

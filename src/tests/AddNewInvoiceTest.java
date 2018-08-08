@@ -8,8 +8,7 @@ import pages.AddNewInvoice;
 import pages.InvoicesPage;
 
 public class AddNewInvoiceTest extends InitTest {
-	public static final String BLANK = "";
-	
+		
 	@Test (priority=25) // C68 - Save (Fields filled with data)
 	public void addNewFilledInputs() {
 		AddNewInvoice newInvoice = new AddNewInvoice(driver);
@@ -37,22 +36,22 @@ public class AddNewInvoiceTest extends InitTest {
 	public void commonFunctions() {
 		InvoicesPage invoices = new InvoicesPage(driver);
 		invoices.AddNewInvoice();
-		System.out.println("one");	
+	
 		invoices.goToInvoices();
 		Assert.assertTrue(invoices.isAtInvoices());
-		System.out.println("two");		
+
 		invoices.goToBussines();
 		Assert.assertTrue(invoices.isAtBusiness());
-		System.out.println("three");			
+
 		invoices.goToClients();
 		Assert.assertTrue(invoices.isAtClients());
-		System.out.println("four");			
+	
 		invoices.goToActivityLog();
 		Assert.assertTrue(invoices.isAtActivityLog());
-		System.out.println("five");			
+
 		invoices.goToInvoices();
 		Assert.assertTrue(invoices.isAtInvoices());
-		System.out.println("six");			
+	
 		invoices.logMeNoOut();
 		Assert.assertTrue(invoices.isLoggedIn());
 			

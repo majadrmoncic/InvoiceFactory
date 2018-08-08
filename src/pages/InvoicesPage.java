@@ -14,16 +14,7 @@ public class InvoicesPage extends CommonPage {
 	public InvoicesPage(WebDriver driver) {
 		super(driver);
 	}
-	private void sleep(int x) {
-		
-		try {
-			Thread.sleep(x);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-	}
+	
 		
 	// CLIENT
 	

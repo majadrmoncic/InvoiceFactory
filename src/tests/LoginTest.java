@@ -9,7 +9,8 @@ import pages.LoginPage;
 public class LoginTest extends InitTest{
 	/*
 	 * 
-	 * 				CREDENTIALS ARE HERE :)
+	 * 					CREDENTIALS ARE HERE!
+	 * 
 	 * 
 	 */
 	public static final String BLANK = "";

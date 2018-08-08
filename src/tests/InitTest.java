@@ -24,9 +24,9 @@ public class InitTest {
 	  driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
   }
   
-  @AfterSuite
-  	public void tearDown() {
-	  	driver.close();
-  }
+//  @AfterSuite
+//  	public void tearDown() {
+//	  	driver.close();
+//  }
   
 }
